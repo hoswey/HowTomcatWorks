@@ -16,7 +16,7 @@ import org.apache.catalina.util.Enumerator;
  * @author Craig R. McClanahan
  * @author Remy Maucherat
  * @version $Revision: 1.13 $ $Date: 2002/03/18 07:15:40 $
- * @deprecated
+ * 
  */
 
 final class HttpRequestImpl
@@ -183,7 +183,7 @@ final class HttpRequestImpl
      *
      * @param name The new header name
      * @param value The new header value
-     * @deprecated Don't use
+     *  Don't use
      */
     public void addHeader(String name, String value) {
 
