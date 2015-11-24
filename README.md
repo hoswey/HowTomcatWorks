@@ -10,4 +10,4 @@ This project copies from[How tomcat works](http://www.brainysoftware.com/9780975
 
 # Tutorial
 
-Navigate to /etc/
+Navigate to "/etc/How_Tomcat_Works.pdf" to get the ebook for study
