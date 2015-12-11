@@ -17,7 +17,7 @@ import org.apache.catalina.session.StandardManager;
 public final class Bootstrap {
   public static void main(String[] args) {
 
-    //invoke: http://localhost:8080/myApp/Session
+    //invoke: http://localhost:8080/webapps/Session
 
     System.setProperty("catalina.base", System.getProperty("user.dir"));
     Connector connector = new HttpConnector();
@@ -27,16 +27,16 @@ public final class Bootstrap {
 
     Context context = new StandardContext();
     // StandardContext's start method adds a default mapper
-    context.setPath("/myApp");
-    context.setDocBase("myApp");
+    context.setPath("/webapps");
+    context.setDocBase("webapps");
 
     context.addChild(wrapper1);
 
     // context.addServletMapping(pattern, name);
-    // note that we must use /myApp/Session, not just /Session
-    // because the /myApp section must be the same as the path, so the cookie will
+    // note that we must use /webapps/Session, not just /Session
+    // because the /webapps section must be the same as the path, so the cookie will
     // be sent back.
-    context.addServletMapping("/myApp/Session", "Session");
+    context.addServletMapping("/webapps/Session", "Session");
     // add ContextConfig. This listener is important because it configures
     // StandardContext (sets configured to true), otherwise StandardContext
     // won't start
